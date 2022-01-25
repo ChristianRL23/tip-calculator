@@ -1,5 +1,6 @@
 import Output from '../../components/Output/Output';
 import './Outputs.scss';
+import Button from './../../components/Button/Button';
 
 const Outputs = () => {
   return (
@@ -7,6 +8,10 @@ const Outputs = () => {
       <div className="outputs__outputs">
         <Output description="Tip Amount" />
         <Output description="Total" />
+      </div>
+      <div className="outputs__buttons">
+        <Button style="strong" content="CALCULATE" />
+        <Button style="strong" content="RESET" />
       </div>
     </div>
   );

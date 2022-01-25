@@ -5,10 +5,19 @@
   background-color: var(--cyan--dark);
   border-radius: 1.5rem;
   padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &__outputs {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }
