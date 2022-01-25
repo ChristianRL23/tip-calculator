@@ -23,4 +23,8 @@ html {
 body {
   font-family: 'Space Mono', monospace;
   background-color: var(--cyan--light--grayish-1);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

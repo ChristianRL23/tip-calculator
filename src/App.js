@@ -1,7 +1,8 @@
 import './App.scss';
+import Container from './layouts/Container/Container';
 
 const App = () => {
-  return <h1>Hola</h1>;
+  return <Container />;
 };
 
 export default App;

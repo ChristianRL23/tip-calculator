@@ -1,0 +1,8 @@
+@import './../../shared';
+
+.container {
+  background-color: var(--white);
+  width: 100rem;
+  height: 50rem;
+  border-radius: $main-border-radius;
+}
