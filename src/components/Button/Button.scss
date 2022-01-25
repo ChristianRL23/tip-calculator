@@ -7,6 +7,7 @@
   width: 100%;
   border-radius: $secondary-border-radius;
   font-size: 2.2rem;
+
   cursor: pointer;
 
   &--dark {
@@ -21,8 +22,44 @@
     color: var(--cyan--dark);
   }
 
+  &--light {
+    @extend .button;
+    background-color: var(--cyan--light--grayish-2);
+    color: var(--cyan--dark);
+  }
+
   &:hover {
     background-color: var(--cyan--light--grayish-1);
     color: var(--cyan--dark);
+  }
+
+  &--custom {
+    width: 100%;
+
+    input {
+      width: 100%;
+      height: 100%;
+      text-align: right;
+      font-size: 2.2rem;
+      font-family: inherit;
+      background-color: var(--cyan--light--grayish-2);
+      color: var(--cyan--dark);
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &--dark {
+      @extend .button--custom;
+      background-color: var(--cyan--dark);
+      color: var(--white);
+    }
+
+    &--strong {
+      @extend .button--custom;
+      background-color: var(--cyan--strong);
+      color: var(--cyan--dark);
+    }
   }
 }
