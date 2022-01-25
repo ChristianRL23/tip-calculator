@@ -1,9 +1,9 @@
 import './Input.scss';
 
-const Input = ({ icon }) => {
+const Input = ({ inputIcon }) => {
   return (
     <div className="input">
-      <img className="input__icon" src={icon} alt="Input icon" />
+      <img className="input__icon" src={inputIcon} alt="Input icon" />
       <input type="number" className="input__text-area" />
     </div>
   );

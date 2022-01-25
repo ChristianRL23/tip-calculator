@@ -1,11 +1,11 @@
-import Input from '../../components/Input/Input';
 import './Inputs.scss';
 import dollarIcon from './icon-dollar.svg';
+import InputsContainer from '../../components/InputsContainer/InputsContainer';
 
 const Inputs = () => {
   return (
     <div className="inputs">
-      <Input icon={dollarIcon} />
+      <InputsContainer inputDescription="Bill" inputIcon={dollarIcon} />
     </div>
   );
 };
