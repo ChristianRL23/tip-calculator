@@ -5,8 +5,8 @@ const Outputs = () => {
   return (
     <div className="outputs">
       <div className="outputs__outputs">
-        <Output />
-        <Output />
+        <Output description="Tip Amount" />
+        <Output description="Total" />
       </div>
     </div>
   );
