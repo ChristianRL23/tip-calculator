@@ -9,7 +9,7 @@ const ButtonsGrid = () => {
       <Button style="dark" content="15%" />
       <Button style="dark" content="25%" />
       <Button style="dark" content="50%" />
-      <Button style="light" content="Custom" />
+      <Button style="light" content="Otro" />
     </div>
   );
 };

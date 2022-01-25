@@ -7,12 +7,15 @@ import ButtonsGrid from '../ButtonsGrid/ButtonsGrid';
 const Inputs = () => {
   return (
     <div className="inputs">
-      <InputsContainer inputDescription="Bill" inputIcon={dollarIcon} />
-      <InputsContainer container inputDescription="Select Tip %">
+      <InputsContainer
+        inputDescription="Total de la Cuenta"
+        inputIcon={dollarIcon}
+      />
+      <InputsContainer container inputDescription="Seleccionar Propina %">
         <ButtonsGrid />
       </InputsContainer>
       <InputsContainer
-        inputDescription="Number of People"
+        inputDescription="Número de Personas"
         inputIcon={personIcon}
       />
     </div>

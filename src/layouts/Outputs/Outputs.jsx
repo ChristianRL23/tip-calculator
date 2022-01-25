@@ -10,8 +10,8 @@ const Outputs = () => {
         <Output description="Total" />
       </div>
       <div className="outputs__buttons">
-        <Button style="strong" content="CALCULATE" />
-        <Button style="strong" content="RESET" />
+        <Button style="strong" content="CALCULAR" />
+        <Button style="strong" content="RESTABLECER" />
       </div>
     </div>
   );
