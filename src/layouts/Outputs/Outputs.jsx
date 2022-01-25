@@ -4,7 +4,7 @@ import './Outputs.scss';
 const Outputs = () => {
   return (
     <div className="outputs">
-      <div>
+      <div className="outputs__outputs">
         <Output />
         <Output />
       </div>
