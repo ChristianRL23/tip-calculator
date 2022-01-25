@@ -20,6 +20,7 @@
     @extend .button;
     background-color: var(--cyan--strong);
     color: var(--cyan--dark);
+    font-weight: bold;
   }
 
   &--light {

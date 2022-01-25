@@ -1,3 +1,4 @@
+/* eslint-disable react/style-prop-object */
 import Output from '../../components/Output/Output';
 import './Outputs.scss';
 import Button from './../../components/Button/Button';
