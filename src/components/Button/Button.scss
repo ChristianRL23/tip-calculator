@@ -1,14 +1,25 @@
 @import './../../shared';
 
 .button {
-  background-color: var(--cyan--dark);
   border: none;
-  color: var(--white);
   font-family: inherit;
   padding: 1rem;
+  width: 100%;
   border-radius: $secondary-border-radius;
   font-size: 2.2rem;
   cursor: pointer;
+
+  &--dark {
+    @extend .button;
+    background-color: var(--cyan--dark);
+    color: var(--white);
+  }
+
+  &--strong {
+    @extend .button;
+    background-color: var(--cyan--strong);
+    color: var(--cyan--dark);
+  }
 
   &:hover {
     background-color: var(--cyan--light--grayish-1);

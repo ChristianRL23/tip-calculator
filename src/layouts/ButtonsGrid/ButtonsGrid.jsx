@@ -4,12 +4,12 @@ import './ButtonsGrid.scss';
 const ButtonsGrid = () => {
   return (
     <div className="buttons-grid">
-      <Button content="5%" />
-      <Button content="10%" />
-      <Button content="15%" />
-      <Button content="25%" />
-      <Button content="50%" />
-      <Button content="Custom" />
+      <Button style="dark" content="5%" />
+      <Button style="dark" content="10%" />
+      <Button style="dark" content="15%" />
+      <Button style="dark" content="25%" />
+      <Button style="dark" content="50%" />
+      <Button style="dark" content="Custom" />
     </div>
   );
 };
