@@ -1,3 +1,4 @@
+/* eslint-disable react/style-prop-object */
 import Button from '../../components/Button/Button';
 import './ButtonsGrid.scss';
 
