@@ -8,13 +8,22 @@
   align-items: center;
   border-radius: $secondary-border-radius;
 
+  &--button {
+    @extend .input;
+
+    &--focus {
+      @extend .input--button;
+      outline: 2.5px solid var(--cyan--strong);
+    }
+  }
+
   &__icon {
     height: 60%;
   }
 
   &--focus {
     @extend .input;
-    border: 2.5px solid var(--cyan--strong);
+    outline: 2.5px solid var(--cyan--strong);
   }
 
   &__text-area {
@@ -34,6 +43,14 @@
 
     &:focus {
       outline: none;
+    }
+
+    &--button {
+      @extend .input__text-area;
+      &::placeholder {
+        text-align: center;
+        color: var(--cyan--dark--grayish-1);
+      }
     }
   }
 }

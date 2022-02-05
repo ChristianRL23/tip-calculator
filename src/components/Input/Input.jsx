@@ -1,7 +1,7 @@
 import './Input.scss';
 import { useState } from 'react';
 
-const Input = ({ inputIcon }) => {
+const Input = ({ inputIcon, type }) => {
   const [inputFocus, setInputFocus] = useState(false);
 
   const focusInputFn = () => setInputFocus(true);
@@ -9,11 +9,28 @@ const Input = ({ inputIcon }) => {
   const blurInputFn = () => setInputFocus(false);
 
   let inputStateClassName;
+  let inputButtonStateClassName;
 
   if (!inputFocus) {
     inputStateClassName = 'input';
+    inputButtonStateClassName = 'input--button';
   } else if (inputFocus) {
     inputStateClassName = 'input--focus';
+    inputButtonStateClassName = 'input--button--focus';
+  }
+
+  if (type === 'button') {
+    return (
+      <div className={inputButtonStateClassName}>
+        <input
+          onBlur={blurInputFn}
+          onFocus={focusInputFn}
+          placeholder="Otro"
+          type="number"
+          className="input__text-area--button"
+        />
+      </div>
+    );
   }
 
   return (
