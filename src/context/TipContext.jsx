@@ -7,12 +7,15 @@ const TipContext = React.createContext({
   setTipPerecentage: () => {},
   persons: 0,
   setPersons: () => {},
+  buttonInputValue: 0,
+  setButtonInputValue: () => {},
 });
 
 export const TipContextProvider = ({ children }) => {
-  const [billTotal, setBillTotal] = useState(0);
-  const [tipPercentage, setTipPerecentage] = useState(0);
-  const [persons, setPersons] = useState(0);
+  const [billTotal, setBillTotal] = useState(undefined);
+  const [tipPercentage, setTipPerecentage] = useState(undefined);
+  const [persons, setPersons] = useState(undefined);
+  const [buttonInputValue, setButtonInputValue] = useState(undefined);
 
   return (
     <TipContext.Provider
@@ -23,6 +26,8 @@ export const TipContextProvider = ({ children }) => {
         setTipPerecentage,
         persons,
         setPersons,
+        buttonInputValue,
+        setButtonInputValue,
       }}
     >
       {children}

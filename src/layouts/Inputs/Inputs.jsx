@@ -21,7 +21,7 @@ const Inputs = () => {
         <ButtonsGrid />
       </InputsContainer>
       <InputsContainer
-        inputState={tipCtx.tipPercentage}
+        inputState={tipCtx.persons}
         setInputState={tipCtx.setPersons}
         inputDescription="Número de Personas"
         inputIcon={personIcon}

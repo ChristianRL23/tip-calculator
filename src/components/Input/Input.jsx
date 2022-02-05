@@ -1,10 +1,15 @@
 import './Input.scss';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import TipContext from '../../context/TipContext';
 
 const Input = ({ inputIcon, type, inputState, setInputState }) => {
+  const tipCtx = useContext(TipContext);
   const [inputFocus, setInputFocus] = useState(false);
-
   const changeInputHandler = (e) => setInputState(e.target.value);
+  const changeButtonInput = (e) => {
+    tipCtx.setButtonInputValue(e.target.value);
+    tipCtx.setTipPerecentage(e.target.value);
+  };
 
   const focusInputFn = () => setInputFocus(true);
 
@@ -25,8 +30,8 @@ const Input = ({ inputIcon, type, inputState, setInputState }) => {
     return (
       <div className={inputButtonStateClassName}>
         <input
-          value={inputState}
-          onChange={changeInputHandler}
+          value={tipCtx.buttonInputValue}
+          onChange={changeButtonInput}
           onBlur={blurInputFn}
           onFocus={focusInputFn}
           placeholder="Otro"
