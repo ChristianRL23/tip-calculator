@@ -7,7 +7,7 @@ const Outputs = () => {
   return (
     <div className="outputs">
       <div className="outputs__outputs">
-        <Output description="Tip Amount" />
+        <Output description="Propina" />
         <Output description="Total" />
       </div>
       <div className="outputs__buttons">
