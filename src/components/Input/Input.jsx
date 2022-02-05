@@ -1,8 +1,10 @@
 import './Input.scss';
 import { useState } from 'react';
 
-const Input = ({ inputIcon, type }) => {
+const Input = ({ inputIcon, type, inputState, setInputState }) => {
   const [inputFocus, setInputFocus] = useState(false);
+
+  const changeInputHandler = (e) => setInputState(e.target.value);
 
   const focusInputFn = () => setInputFocus(true);
 
@@ -23,6 +25,8 @@ const Input = ({ inputIcon, type }) => {
     return (
       <div className={inputButtonStateClassName}>
         <input
+          value={inputState}
+          onChange={changeInputHandler}
           onBlur={blurInputFn}
           onFocus={focusInputFn}
           placeholder="Otro"
@@ -37,6 +41,8 @@ const Input = ({ inputIcon, type }) => {
     <div className={inputStateClassName}>
       <img className="input__icon" src={inputIcon} alt="Input icon" />
       <input
+        value={inputState}
+        onChange={changeInputHandler}
         onBlur={blurInputFn}
         onFocus={focusInputFn}
         placeholder="0"

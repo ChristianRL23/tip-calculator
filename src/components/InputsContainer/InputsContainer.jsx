@@ -6,6 +6,8 @@ const InputsContainer = ({
   inputIcon,
   container,
   children,
+  inputState,
+  setInputState,
 }) => {
   if (container) {
     return (
@@ -18,7 +20,11 @@ const InputsContainer = ({
     return (
       <div className="inputs-container">
         <h6 className="inputs-container__description">{inputDescription}</h6>
-        <Input inputIcon={inputIcon} />
+        <Input
+          inputState={inputState}
+          setInputState={setInputState}
+          inputIcon={inputIcon}
+        />
       </div>
     );
   }
