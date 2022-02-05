@@ -12,6 +12,11 @@
     height: 60%;
   }
 
+  &--focus {
+    @extend .input;
+    border: 2.5px solid var(--cyan--strong);
+  }
+
   &__text-area {
     border: none;
     background-color: transparent;
