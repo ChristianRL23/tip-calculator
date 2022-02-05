@@ -23,6 +23,10 @@
     font-size: 2.2rem;
     font-family: inherit;
 
+    &::placeholder {
+      color: var(--cyan--dark--grayish-2);
+    }
+
     &:focus {
       outline: none;
     }

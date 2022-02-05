@@ -4,7 +4,7 @@ const Input = ({ inputIcon }) => {
   return (
     <div className="input">
       <img className="input__icon" src={inputIcon} alt="Input icon" />
-      <input type="number" className="input__text-area" />
+      <input placeholder="0" type="number" className="input__text-area" />
     </div>
   );
 };
