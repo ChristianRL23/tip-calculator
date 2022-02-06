@@ -9,19 +9,21 @@ const Outputs = () => {
   const tipCtx = useContext(TipContext);
   const calculateTip = () => {
     if (tipCtx.billTotal === '') {
-      tipCtx.setBillInputError('No puede estar vacío.');
+      tipCtx.setBillInputError('No puede estar vacío');
     } else if (tipCtx.billTotal <= 0) {
-      tipCtx.setBillInputError('Debe ser mayor a cero.');
+      tipCtx.setBillInputError('Debe ser mayor a cero');
     }
     if (tipCtx.tipPercentage === '') {
-      tipCtx.setTipInputError('No puede estar vacío.');
+      tipCtx.setTipInputError('No puede estar vacío');
     } else if (tipCtx.tipPercentage <= 0) {
-      tipCtx.setTipInputError('Debe ser mayor a cero.');
+      tipCtx.setTipInputError('Debe ser mayor a cero');
+    } else if (tipCtx.tipPercentage > 100) {
+      tipCtx.setTipInputError('Debe ser menor a cien');
     }
     if (tipCtx.persons === '') {
-      tipCtx.setPersonsInputError('No puede estar vacío.');
+      tipCtx.setPersonsInputError('No puede estar vacío');
     } else if (tipCtx.persons <= 0) {
-      tipCtx.setPersonsInputError('Debe ser mayor a cero.');
+      tipCtx.setPersonsInputError('Debe ser mayor a cero');
     }
   };
 
