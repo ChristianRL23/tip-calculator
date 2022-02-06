@@ -8,26 +8,32 @@ const InputsContainer = ({
   children,
   inputState,
   setInputState,
+  inputError,
+  setInputError,
 }) => {
-  if (container) {
-    return (
-      <div className="inputs-container">
-        <h6 className="inputs-container__description">{inputDescription}</h6>
-        {children}
+  return (
+    <div className="inputs-container">
+      <div className="inputs-container__texts">
+        <h6 className="inputs-container__texts__description">
+          {inputDescription}
+        </h6>
+        {inputError && (
+          <p className="inputs-container__texts__error-message">{inputError}</p>
+        )}
       </div>
-    );
-  } else {
-    return (
-      <div className="inputs-container">
-        <h6 className="inputs-container__description">{inputDescription}</h6>
+      {container ? (
+        children
+      ) : (
         <Input
+          inputError={inputError}
+          setInputError={setInputError}
           inputState={inputState}
           setInputState={setInputState}
           inputIcon={inputIcon}
         />
-      </div>
-    );
-  }
+      )}
+    </div>
+  );
 };
 
 export default InputsContainer;

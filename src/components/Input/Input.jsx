@@ -2,11 +2,22 @@ import './Input.scss';
 import { useContext, useState } from 'react';
 import TipContext from '../../context/TipContext';
 
-const Input = ({ inputIcon, type, inputState, setInputState }) => {
+const Input = ({
+  inputIcon,
+  type,
+  inputState,
+  setInputState,
+  inputError,
+  setInputError,
+}) => {
   const tipCtx = useContext(TipContext);
   const [inputFocus, setInputFocus] = useState(false);
-  const changeInputHandler = (e) => setInputState(e.target.value);
+  const changeInputHandler = (e) => {
+    setInputState(e.target.value);
+    setInputError(false);
+  };
   const changeButtonInput = (e) => {
+    setInputError(false);
     tipCtx.setButtonInputValue(e.target.value);
     tipCtx.setTipPerecentage(e.target.value);
   };
@@ -43,7 +54,7 @@ const Input = ({ inputIcon, type, inputState, setInputState }) => {
   }
 
   return (
-    <div className={inputStateClassName}>
+    <div className={inputError ? 'input--error' : inputStateClassName}>
       <img className="input__icon" src={inputIcon} alt="Input icon" />
       <input
         value={inputState}

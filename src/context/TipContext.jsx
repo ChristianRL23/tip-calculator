@@ -9,13 +9,24 @@ const TipContext = React.createContext({
   setPersons: () => {},
   buttonInputValue: 0,
   setButtonInputValue: () => {},
+  inputsError: {},
+  setInputsError: () => {},
+  billInputError: '',
+  setBillInputError: () => {},
+  tipInputError: '',
+  setTipInputError: () => {},
+  personsInputError: '',
+  setPersonsInputError: () => {},
 });
 
 export const TipContextProvider = ({ children }) => {
-  const [billTotal, setBillTotal] = useState(undefined);
-  const [tipPercentage, setTipPerecentage] = useState(undefined);
-  const [persons, setPersons] = useState(undefined);
-  const [buttonInputValue, setButtonInputValue] = useState(undefined);
+  const [billTotal, setBillTotal] = useState('');
+  const [tipPercentage, setTipPerecentage] = useState('');
+  const [persons, setPersons] = useState('');
+  const [buttonInputValue, setButtonInputValue] = useState('');
+  const [billInputError, setBillInputError] = useState('');
+  const [tipInputError, setTipInputError] = useState('');
+  const [personsInputError, setPersonsInputError] = useState('');
 
   return (
     <TipContext.Provider
@@ -28,6 +39,12 @@ export const TipContextProvider = ({ children }) => {
         setPersons,
         buttonInputValue,
         setButtonInputValue,
+        billInputError,
+        setBillInputError,
+        tipInputError,
+        setTipInputError,
+        personsInputError,
+        setPersonsInputError,
       }}
     >
       {children}

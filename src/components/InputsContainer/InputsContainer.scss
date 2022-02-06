@@ -1,7 +1,18 @@
 .inputs-container {
-  &__description {
-    font-size: 1.6rem;
+  &__texts {
+    display: flex;
+    align-items: center;
     margin-bottom: 1rem;
-    color: var(--cyan--dark--grayish-1);
+    justify-content: space-between;
+
+    &__description {
+      font-size: 1.6rem;
+      color: var(--cyan--dark--grayish-1);
+    }
+
+    &__error-message {
+      font-size: 1.35rem;
+      color: var(--red);
+    }
   }
 }
