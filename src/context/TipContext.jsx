@@ -17,6 +17,8 @@ const TipContext = React.createContext({
   setTipInputError: () => {},
   personsInputError: '',
   setPersonsInputError: () => {},
+  buttonInputSelected: false,
+  setButtonInputSelected: () => {},
 });
 
 export const TipContextProvider = ({ children }) => {
@@ -27,6 +29,7 @@ export const TipContextProvider = ({ children }) => {
   const [billInputError, setBillInputError] = useState('');
   const [tipInputError, setTipInputError] = useState('');
   const [personsInputError, setPersonsInputError] = useState('');
+  const [buttonInputSelected, setButtonInputSelected] = useState(false);
 
   return (
     <TipContext.Provider
@@ -45,6 +48,8 @@ export const TipContextProvider = ({ children }) => {
         setTipInputError,
         personsInputError,
         setPersonsInputError,
+        buttonInputSelected,
+        setButtonInputSelected,
       }}
     >
       {children}

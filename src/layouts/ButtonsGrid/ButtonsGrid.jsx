@@ -11,6 +11,7 @@ const ButtonsGrid = ({ inputError, setInputError }) => {
   const clickButtonFn = (e) => {
     tipCtx.setTipPerecentage(e.target.innerHTML.slice(0, -1));
     tipCtx.setButtonInputValue('');
+    tipCtx.setButtonInputSelected(false);
   };
 
   return (

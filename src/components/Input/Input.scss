@@ -11,6 +11,12 @@
   &--button {
     @extend .input;
 
+    &--selected {
+      @extend .input--button;
+      background-color: var(--cyan--strong);
+      font-weight: 700;
+    }
+
     &--focus {
       @extend .input--button;
       outline: 2.5px solid var(--cyan--strong);
@@ -35,7 +41,7 @@
     border: none;
     background-color: transparent;
     color: var(--cyan--dark);
-    font-weight: bold;
+    font-weight: 700;
     text-align: right;
     width: 100%;
     height: 100%;

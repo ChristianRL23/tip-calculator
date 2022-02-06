@@ -7,8 +7,12 @@
   width: 100%;
   border-radius: $secondary-border-radius;
   font-size: 2.2rem;
-
   cursor: pointer;
+
+  &--selected {
+    @extend .button;
+    background-color: var(--cyan--strong);
+  }
 
   &--dark {
     @extend .button;

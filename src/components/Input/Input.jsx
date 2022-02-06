@@ -12,6 +12,7 @@ const Input = ({
 }) => {
   const tipCtx = useContext(TipContext);
   const [inputFocus, setInputFocus] = useState(false);
+
   const changeInputHandler = (e) => {
     setInputState(e.target.value);
     setInputError(false);
@@ -26,6 +27,29 @@ const Input = ({
 
   const blurInputFn = () => setInputFocus(false);
 
+  const focusButtonInput = () => {
+    setInputFocus(true);
+    tipCtx.setButtonInputSelected(false);
+  };
+
+  const blurButtonInput = () => {
+    setInputFocus(false);
+    tipCtx.setButtonInputSelected(false);
+    if (
+      tipCtx.buttonInputValue === '5' ||
+      tipCtx.buttonInputValue === '10' ||
+      tipCtx.buttonInputValue === '15' ||
+      tipCtx.buttonInputValue === '25' ||
+      tipCtx.buttonInputValue === '50' ||
+      tipCtx.buttonInputValue === '0' ||
+      tipCtx.buttonInputValue === ''
+    ) {
+      tipCtx.setButtonInputValue('');
+    } else {
+      tipCtx.setButtonInputSelected(true);
+    }
+  };
+
   let inputStateClassName;
   let inputButtonStateClassName;
 
@@ -39,15 +63,21 @@ const Input = ({
 
   if (type === 'button') {
     return (
-      <div className={inputButtonStateClassName}>
+      <div
+        className={
+          tipCtx.buttonInputSelected
+            ? 'input--button--selected'
+            : inputButtonStateClassName
+        }
+      >
         <input
           value={tipCtx.buttonInputValue}
           onChange={changeButtonInput}
-          onBlur={blurInputFn}
-          onFocus={focusInputFn}
+          onBlur={blurButtonInput}
+          onFocus={focusButtonInput}
           placeholder="Otro"
           type="number"
-          className="input__text-area--button"
+          className={'input__text-area--button'}
         />
       </div>
     );
