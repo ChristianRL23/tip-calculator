@@ -13,6 +13,7 @@ const Outputs = () => {
 
   let inputsValid;
   const tipCtx = useContext(TipContext);
+
   const calculateTip = () => {
     if (tipCtx.billTotal === '') {
       tipCtx.setBillInputError('No puede estar vacío');
@@ -50,6 +51,21 @@ const Outputs = () => {
     }
   };
 
+  const resetCalculator = () => {
+    tipCtx.setBillTotal('');
+    tipCtx.setTipPerecentage('');
+    tipCtx.setPersons('');
+    tipCtx.setButtonInputSelected(false);
+    tipCtx.setButtonInputValue('');
+    setTotalTip({
+      totalTip: 0,
+      tipPerPerson: 0,
+    });
+    tipCtx.setBillInputError('');
+    tipCtx.setTipInputError('');
+    tipCtx.setPersonsInputError('');
+  };
+
   return (
     <div className="outputs">
       <div className="outputs__outputs">
@@ -66,7 +82,11 @@ const Outputs = () => {
       </div>
       <div className="outputs__buttons">
         <Button clickFn={calculateTip} style="strong" content="CALCULAR" />
-        <Button style="strong" content="RESTABLECER" />
+        <Button
+          clickFn={resetCalculator}
+          style="strong"
+          content="RESTABLECER"
+        />
       </div>
     </div>
   );
