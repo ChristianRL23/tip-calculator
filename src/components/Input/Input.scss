@@ -58,6 +58,7 @@
 
     &--button {
       @extend .input__text-area;
+
       &::placeholder {
         text-align: center;
         color: var(--cyan--dark--grayish-1);
@@ -74,4 +75,12 @@ input::-webkit-inner-spin-button {
 
 input[type='number'] {
   -moz-appearance: textfield;
+}
+
+.input--button {
+  height: 100%;
+
+  @media screen and (max-width: 685px) {
+    padding: 0.5rem 1rem;
+  }
 }

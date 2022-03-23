@@ -9,6 +9,14 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @media screen and (max-width: 676px) {
+    gap: 3rem;
+  }
+
+  @media screen and (max-width: 350px) {
+    padding: 3rem;
+  }
+
   &__outputs {
     display: flex;
     flex-direction: column;

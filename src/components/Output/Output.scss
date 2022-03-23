@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
 
+  @media screen and (max-width: 350px) {
+    flex-direction: column;
+  }
+
   &__description {
     font-weight: normal;
 
