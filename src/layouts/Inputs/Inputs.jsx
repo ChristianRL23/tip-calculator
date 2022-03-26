@@ -14,7 +14,7 @@ const Inputs = () => {
       <InputsContainer
         inputState={tipCtx.billTotal}
         setInputState={tipCtx.setBillTotal}
-        inputDescription="Total de la Cuenta"
+        inputDescription="Bill"
         inputIcon={dollarIcon}
         inputError={tipCtx.billInputError}
         setInputError={tipCtx.setBillInputError}
@@ -23,7 +23,7 @@ const Inputs = () => {
         container
         inputError={tipCtx.tipInputError}
         setInputError={tipCtx.setTipInputError}
-        inputDescription="Seleccionar Propina %"
+        inputDescription="Select Tip %"
       >
         <ButtonsGrid
           inputError={tipCtx.tipInputError}
@@ -35,7 +35,7 @@ const Inputs = () => {
         setInputState={tipCtx.setPersons}
         inputError={tipCtx.personsInputError}
         setInputError={tipCtx.setPersonsInputError}
-        inputDescription="Número de Personas"
+        inputDescription="Number of people"
         inputIcon={personIcon}
       />
     </div>

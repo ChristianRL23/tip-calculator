@@ -75,7 +75,7 @@ const Input = ({
           onChange={changeButtonInput}
           onBlur={blurButtonInput}
           onFocus={focusButtonInput}
-          placeholder="Otro"
+          placeholder="Other"
           type="number"
           className={'input__text-area--button'}
         />
