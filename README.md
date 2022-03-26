@@ -20,8 +20,8 @@
 ---
 
 <p float="left">
-  <img src="/images/empty.jpg" width="500" >
-  <img src="/images/responsive.jpg" width="500" >
+  <img src="/images/empty.jpg" width="700" >
+  <img src="/images/responsive.jpg" width="700" >
 </p>
 
 
